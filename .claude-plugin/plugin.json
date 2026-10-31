@@ -4,11 +4,17 @@
   "version": "1.0.0",
   "description": "Stops an AI turning a thin request into slop: it asks you numbered questions first, researches what you don't hold, drafts to a plain-English law, checks the draft, and has it reviewed cold.",
   "author": {
-    "name": "Matthew Wolff Simon",
-    "url": "https://github.com/WolffSimon"
+    "name": "Matthew Wolff Simon"
   },
   "homepage": "https://github.com/WolffSimon/Magnify",
   "repository": "https://github.com/WolffSimon/Magnify",
   "license": "CC-BY-4.0 AND MIT",
-  "keywords": ["writing", "editing", "review", "research", "style", "plain-english"]
+  "keywords": [
+    "writing",
+    "editing",
+    "review",
+    "research",
+    "style",
+    "plain-english"
+  ]
 }

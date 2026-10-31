@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Magnify slop check: a mechanical first pass over a draft before a human or a cold reviewer reads it.
 
 Usage:
@@ -29,7 +28,7 @@ FAULTS = [
     (r"\brather than\b", "antithesis: rather than"),
     (r"\bless (?:a|an) [\w -]{1,30} than\b", "antithesis: less X than Y"),
     (r"\bis (?:what|how|where|the one|the thing|the work) (?:I|we)\b", "fronted noun phrase: X is what I Y"),
-    (r"\bhaving (?:\w+ed|run|built|led|written|made|taken|held|grown|set|kept|won)\b", "absolute construction: having done"),
+    (r"\bhaving (?:\w+ed|run|built|led|written|made|taken|held|grown|kept|won)\b", "absolute construction: having done"),
     (r"\bwith [\w ]{1,30} (?:held|maintained|kept|intact|in place|unchanged)\b", "absolute construction: with X held"),
     (r"\bunder (?:a |the |my |its |our |their |his |her )?(?:\w+ )?(?:governance|controls?|standards?|accountability|budget|brief|policy|policies|review|audit|management|supervision|leadership|framework)\b", "metaphorical 'under'"),
     (r"\boperating system\b", "'operating system' (a metaphor unless it means software)"),
@@ -46,12 +45,12 @@ FAULTS = [
     (r"\b(?:genuinely|truly|really|deeply|incredibly)\b", "intensifier"),
     (r"\b(?:plainly|candidly|simply put|to be clear|frankly)\b", "use-mention: show it, don't say it"),
     (r"\bit'?s worth noting\b|\bit is worth noting\b|\bimportantly,", "throat-clearing"),
-    (r"\b(?:the challenge|the problem|the role|the need) (?:your|the) (?:brief|posting|job description) (?:describes|names|sets out)\b", "performative syntax: pointing at the reader's document"),
+    (r"\b(?:the challenge|the problem|the role|the need) (?:your|the) (?:brief|posting|job description) (?:describes|names)\b", "performative syntax: pointing at the reader's document"),
 ]
 
 ADVISORY_VERBS = re.compile(
     r"\b(?:am|is|are|was|were|be|been|being|has|have|had|do|does|did|will|would|can|could|should|may|might|must|shall|"
-    r"\w+ed|ran|run|runs|built|builds?|wrote|writes?|led|leads?|made|makes?|took|takes?|held|holds?|grew|grows?|set|sets|"
+    r"\w+ed|ran|run|runs|built|builds?|wrote|writes?|led|leads?|made|makes?|took|takes?|held|holds?|grew|grows?|"
     r"kept|keeps?|went|goes|came|comes?|said|says?|gave|gives?|got|gets?|saw|sees?|found|brought|brings?|cut|cuts|paid|pays?|"
     r"won|wins?|lost|loses?|met|meets?|taught|teaches|told|tells?|felt|feels?|began|begins?|spent|spends?|stood|stands?|"
     r"sold|sells?|drew|draws?|knew|knows?|fell|falls?|rose|rises?|left|leaves?|put|puts|need|needs|use|uses|work|works|"
@@ -62,7 +61,7 @@ ADVISORY_VERBS = re.compile(
     r"zip|copy|paste|outrank|outranks|install|upload|pass|returns?|remove|removes|replace|replaces|review|reviews|suggest|"
     r"suggests|deal|deals|reject|rejects|accept|accepts|turn|turns|becomes?|became|trade|trades|mention|mentions|list|lists|"
     r"match|matches|sort|sorts|choose|chooses|chose|decide|decides|explain|explains|describe|describes|compare|apply|applies|"
-    r"export|exports|finish|finishes|record|records|draft|drafts|answer|answers|own|owns|lead|manage|manages|report|reports|"
+    r"finish|finishes|record|records|draft|drafts|answer|answers|own|owns|lead|manage|manages|report|reports|"
     r"matter|matters|happen|happens|happened|depend|depends|belong|belongs|exist|exists|collect|collects|prefer|prefers|"
     r"label|labels|contact|contacts)\b",
     re.I,

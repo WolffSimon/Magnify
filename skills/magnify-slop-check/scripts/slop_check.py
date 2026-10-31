@@ -63,7 +63,8 @@ ADVISORY_VERBS = re.compile(
     r"suggests|deal|deals|reject|rejects|accept|accepts|turn|turns|becomes?|became|trade|trades|mention|mentions|list|lists|"
     r"match|matches|sort|sorts|choose|chooses|chose|decide|decides|explain|explains|describe|describes|compare|apply|applies|"
     r"export|exports|finish|finishes|record|records|draft|drafts|answer|answers|own|owns|lead|manage|manages|report|reports|"
-    r"matter|matters|happen|happens|happened|depend|depends|belong|belongs|exist|exists)\b",
+    r"matter|matters|happen|happens|happened|depend|depends|belong|belongs|exist|exists|collect|collects|prefer|prefers|"
+    r"label|labels|contact|contacts)\b",
     re.I,
 )
 

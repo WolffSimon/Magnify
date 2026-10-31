@@ -52,7 +52,7 @@ Each agent knows only its brief. Write it as you would brief a capable stranger:
   - **D.** Reasons for caution: conflicting figures, weak sources, signs that the premise is wrong.
 - **A length limit**, such as 2,500 words not counting links.
 
-Keep confidential matters out of any brief that leaves your own environment. A research agent needs the question, not the secret behind it.
+Keep confidential matters out of any brief you give to a research tool outside your own session. A research agent needs the question, not the private detail behind it.
 
 ## 5. Run it
 

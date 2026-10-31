@@ -62,7 +62,7 @@ You can also copy the folders in `skills/` into `.claude/skills/` in a project, 
 
 ## What it runs and what it sends
 
-Magnify is a set of written instructions and one script. The script, `slop_check.py`, reads the file you give it and prints its findings. It makes no network connections and writes no files. The skills tell your assistant to ask you questions, to draft, and to start reviewer and research agents in your own session. Research uses your assistant's own web search and page-fetching tools. Magnify collects no data and sends nothing anywhere.
+Magnify is a set of written instructions and one script. The script, `slop_check.py`, reads the file you give it and prints its findings. It makes no network connections, writes no files, and reads no credentials, tokens, keys or environment variables. The skills tell your assistant to ask you questions, to draft, and to start reviewer and research agents in your own session. Research uses your assistant's own web search and page-fetching tools. Magnify collects no data and sends nothing anywhere.
 
 ## Making it yours
 

@@ -1,0 +1,13 @@
+{
+  "name": "wolffsimon",
+  "description": "Plugins by Matthew Wolff Simon. Magnify: ask first, research, write plainly, check, review cold.",
+  "owner": {
+    "name": "Matthew Wolff Simon"
+  },
+  "plugins": [
+    {
+      "name": "magnify-writing",
+      "source": "./"
+    }
+  ]
+}

@@ -41,15 +41,28 @@ An example. Asked for "a deck for our Q3 review", Magnify asks questions like th
 - `SYSTEM_PROMPT.md`: the whole method as one paste-in prompt, for assistants without skills.
 - `RUNBOOK.md`: the order of operations.
 
-## Deploying it
+## Installing it
 
-**Claude.ai (web and desktop; custom skills need a paid plan).** Zip each skill folder on its own, so that the zip contains the folder with `SKILL.md` inside it. Then go to Settings, Capabilities, Skills, and upload each zip. Ready-made zips are in `dist/`.
+**From Anthropic's directory (claude.ai, Cowork and Claude Code).** Once the listing is live, find Magnify in the directory at claude.ai/directory and add it. It then loads in Claude Code too.
 
-**Claude Code.** Copy the folders in `skills/` into `.claude/skills/` in a project, or into `~/.claude/skills/` for every project. Claude Code can run the cold review with a fresh subagent each round.
+**Claude Code, from this repository.** In your shell:
+
+```
+claude plugin marketplace add WolffSimon/Magnify
+claude plugin install magnify-writing@wolffsimon
+```
+
+You can also copy the folders in `skills/` into `.claude/skills/` in a project, or into `~/.claude/skills/` for every project. Claude Code can run the cold review and the research with fresh subagents.
+
+**Claude.ai, as uploaded skills.** Download the skill zips from this repository's Releases page. Then go to Settings, Capabilities, Skills, and upload each zip. Custom skills need a paid plan.
 
 **Other assistants.** Paste `SYSTEM_PROMPT.md` into the custom instructions or the project instructions. For the cold review, open a new conversation each round, or use a second model. Give it only the brief from `magnify-cold-review` and the three files.
 
 **The checker.** `python skills/magnify-slop-check/scripts/slop_check.py draft.md`. It needs Python 3.8 or later, plus `python-docx` for Word files.
+
+## What it runs and what it sends
+
+Magnify is a set of written instructions and one script. The script, `slop_check.py`, reads the file you give it and prints its findings. It makes no network connections and writes no files. The skills tell your assistant to ask you questions, to draft, and to start reviewer and research agents in your own session. Research uses your assistant's own web search and page-fetching tools. Magnify collects no data and sends nothing anywhere.
 
 ## Making it yours
 
